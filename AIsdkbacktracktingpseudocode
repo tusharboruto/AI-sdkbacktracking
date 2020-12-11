@@ -1,0 +1,41 @@
+#program start
+
+#create 9x9 matrix 'board' as sdk game starting board
+
+#define function printboard(bo)     //to print entire boar
+  -prints entire 9x9 matrix
+
+#define function findempty(bo)      //to find bxes with 0
+  -for i upto lenofrow
+    for j upto lenofclm
+     if(b0[i][j]==0)
+  
+  -retun i,j
+
+#define function valid(bo,num,pos)
+  -check num was fit in row or not
+    if fits
+      return true
+  -check num was fit in clm or not
+    if fits
+      return true
+  -if both returns true
+    return true for valid()
+
+#define function solve(bo)
+  -print(bo)             //prints board at every step of solving and we gets backtracking
+  -find=findempty(bo)
+    if finds
+     for i from 1 to 10
+       if valid(bo,i,(row,clm))
+          if solve(bo)
+            return true
+  -else not found empty
+ return false
+
+#main prgm
+ printboard(bo)     //before solving
+ solve(bo) 
+ printboard(bo)     //after  solving 
+   
+
